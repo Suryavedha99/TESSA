@@ -52,6 +52,7 @@ Below is an example of how a typical interaction with TESSA looks in the termina
 <span style="color:blue;">File System Agent initialized for Windows</span><br>
 <span style="color:blue;">Home directory: C:\Users\YourName</span><br>
 <span style="color:blue;">File System Agent is ready!</span><br>
+
 <span style="color:blue;">You can now use natural language commands like:</span><br>
 <span style="color:blue;"> - 'move folder projects from desktop to documents'</span><br>
 <span style="color:blue;"> - 'copy file report.pdf from downloads to desktop'</span><br>
@@ -62,33 +63,13 @@ Below is an example of how a typical interaction with TESSA looks in the termina
 
 What would you like me to do? <span style="color:black;">> create folder test_project in documents</span><br>
 <span style="color:blue;">Successfully created folder 'test_project' in C:\Users\YourName\Documents</span><br>
+
 What would you like me to do? <span style="color:black;">> move folder test_project from documents to desktop</span><br>
 <span style="color:blue;">Successfully moved 'test_project' from C:\Users\YourName\Documents to C:\Users\YourName\Desktop</span><br>
+
 What would you like me to do? <span style="color:black;">> exit</span><br>
 <span style="color:blue;">Goodbye!</span>
 </div>
-
----
-
-## How It Works
-
-TESSA operates in three key stages:
-
-### 1. Command Parsing & Intent Recognition
-Each command is parsed using spaCy and regular expressions to identify:
-- The action (`move`, `copy`, etc.)
-- The item (file or folder)
-- Source and destination paths
-- Optional new names (for renaming)
-
-### 2. Mapping to File System Actions
-Commands are matched to internal methods via a mapping dictionary. If any key element is missing, the system prompts the user for clarification.
-
-### 3. System Execution
-Operations are performed using Python’s `os` and `shutil` modules:
-- `shutil.move`, `shutil.copy2`, `shutil.copytree`
-- `os.remove`, `shutil.rmtree`
-- `os.rename`, `os.makedirs`, `open()`, `os.listdir`
 
 ---
 
