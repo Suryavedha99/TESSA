@@ -1,6 +1,8 @@
 # TESSA: Task-Optimized Engine for System Support and Automation
 
-TESSA is a Natural Language Processing (NLP)-based command-line tool that automates local file management. It interprets user commands in natural language and maps them to system-level file operations such as move, copy, delete, rename, and create.
+TESSA (Task-Optimized Engine for System Support and Automation) is a Natural Language Processing (NLP)-based command-line tool designed to automate local file management. It enables users to perform system-level operations such as move, copy, delete, rename, and create through intuitive natural language commands. This project serves as a functional prototype and foundational step toward developing a cross-platform, intelligent file management assistant capable of operating at a software/system level. 
+
+Below, we have provided detailed setup instructions, required package installations, supported command structures, and a sample session to demonstrate TESSA’s functionality and ease of use.
 
 ---
 
@@ -79,4 +81,6 @@ What would you like me to do? <span style="color:black;">> exit</span><br>
 - Development of a GUI for non-terminal users  
 - Cloud sync and cross-platform support for mobile environments
 
-© 2025 Suryavedha Pradhan, Vishnu Vardhan Chundu, and Shreyas Achal. This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+
+© 2025 Suryavedha Pradhan, Vishnu Vardhan Chundu, Shreyas Achal. This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
